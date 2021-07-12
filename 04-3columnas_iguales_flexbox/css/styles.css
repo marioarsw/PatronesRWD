@@ -39,3 +39,28 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: flex;
+        gap: 2rem; /*Se supone que safari aún no lo soporta*/
+    }
+}
+
+/*
+En caso de buscar más soporte se
+tiene que hacer lo siguiente
+*/
+
+/*
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .entrada-blog {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+*/

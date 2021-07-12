@@ -48,3 +48,22 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+   .contenedor-flex {
+       display: flex;
+       justify-content: space-between;  
+   }
+
+   .contenido-principal {
+       flex-basis: calc(60% - 1rem); /*Definiendo el ancho del contenido principal en flex*/
+   }
+
+   .sidebar {
+       flex-basis: calc(20% -1rem); /*Definiendo el ancho de los sidebar en flex*/
+   }
+
+   .sidebar-1 {
+       order: -1; /*Mostrar al inicio*/
+   }
+}
