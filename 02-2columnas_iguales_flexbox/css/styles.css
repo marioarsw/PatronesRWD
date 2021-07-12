@@ -39,3 +39,32 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+/*
+Utilizando flex
+Por defecto todos los elementos hijos se muestran de izquierda a derecha
+
+SIEMPRE Que quiera alinear elementos o moverlos
+tengo que ir a la clase padre y aplicar el display
+*/
+
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+/*
+O tambien se puede usar la clase de un hijo y aplicar flex
+Que tiene el 100% de soporte en los navegadores
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .entrada-blog {
+        flex: 0 0 calc( 50% - rem );
+    }
+}
+*/
