@@ -49,3 +49,19 @@ p {
 
 
 /** CODIGO AQUI **/
+/*Layout shifter con css grid*/
+
+@media (min-width: 768px) {
+   .layout-shifter {
+       display: grid;
+       grid-template-areas: "contenido"
+                            "inferior";
+   }
+}
+
+@media (min-width: 992px) {
+    .layout-shifter {
+        /*se hereda el grid*/
+        grid-template-areas: "contenido sidebar";
+    }
+}
