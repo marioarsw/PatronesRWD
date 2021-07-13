@@ -49,3 +49,41 @@ p {
 
 
 /** CODIGO AQUI **/
+
+/*El patrón sidebar se logra más fácil con flex*/
+
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: flex;
+        gap: 2rem;
+    }
+
+    aside {
+        flex: 1; /*Va a tener un crecimiento de 1*/
+    }
+    article {
+        flex: 3; /*Va a tener un crecimiento de 3*/
+    }
+    /*
+    Explicación aside y article
+    El factor de crecimiento dice que el aside tendrá un pixel, mientras que el 
+    article 3.
+    Supongamos que aside mide 300px el article medirá 900px.
+    Irán creciendo hasta que lleguen a los 1200px
+    */
+}
+
+/*Lo mismo de arriba solo que aquí yo estoy haciendo los calculos*/
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    aside {
+        flex: 0 0 calc(33.3% - 1rem); /*Va a tener un crecimiento de 1*/
+    }
+    article {
+        flex: 0 0 calc(66.6% -1rem); /*Va a tener un crecimiento de 3*/
+    }
+}
