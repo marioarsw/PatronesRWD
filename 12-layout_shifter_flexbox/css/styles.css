@@ -48,3 +48,51 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+/*Esto es mejor con grid, pero como se puede ver también se puede hacer con flex*/
+
+@media (min-width: 768px) {
+    .layout-shifter {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contenido-principal {
+        display: flex;
+        /*gap: 2rem;
+        el gap se sustituye por
+        justifiy-content: space-between;
+        .entrada-blog {
+        flex: 0 0 calc(50% - 2rem);
+        }
+        esto para tener mayor compatibilidad
+        */
+        justify-content: space-between;
+    }
+
+    .entrada-blog {
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+@media (min-width: 992px) {
+   .layout-shifter {
+       flex-direction: row;
+       justify-content: space-between;
+   }
+
+   .contenido-principal {
+       flex: 0 0 calc(66.6% - 2rem); 
+       /* (0) Factor de crecimiento y que (0) se haga más pequeño*/
+       flex-wrap: wrap; /*Cuando llega al límite del lado derecho los elementos se colocan hacia abajo*/
+   }
+
+   .sidebar {
+       flex: 0 0 calc(33.3% - 2rem);
+       order: 2;
+   }
+
+   .entrada-blog {
+       flex: 0 0 100%;
+   }
+}

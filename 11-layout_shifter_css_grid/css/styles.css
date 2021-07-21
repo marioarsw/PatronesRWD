@@ -71,10 +71,13 @@ p {
    }
 }
 
+/**Investigar como funciona exactamente grid-template-areas**/
+
 @media (min-width: 992px) {
     .layout-shifter {
         /*se hereda el grid*/
         grid-template-areas: "contenido sidebar";
+        column-gap: 2rem;
     }
 
     .sidebar {
