@@ -37,3 +37,27 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+.contenedor {
+    /*width: 1200px; Esto hace que se quede fijo*/
+    max-width: 120rem; /*Esto es lo máximo que podrá tomar, en caso de que haya más espacio*/
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) { /*Para tablet*/
+   .contenedor {
+       width: 80%;
+   }
+}
+
+@media (min-width: 992px) {
+   .contenedor {
+       width: 60%;
+   }
+}
+
+img {
+    /*width: 100%; Lo hace siempre resposive*/
+    max-width: 100%; /*Si la imagen es muy pequeña no la forza a creer, así que es mejor*/
+}
